@@ -13,6 +13,8 @@ contract Election {
 
   uint public candidatesCount;
 
+  event votedEvent(uint indexed _candidateId);
+
   constructor() public {
     addCandidate("Jair Bolsonaro");
     addCandidate("João Amoedo");
@@ -35,6 +37,8 @@ contract Election {
 
     candidates[_candidateId].voteCount++;
     hasAddressVoted[msg.sender] = true;
+
+    emit votedEvent(_candidateId);
   }
 
 }
