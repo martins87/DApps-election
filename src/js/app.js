@@ -5,6 +5,7 @@ App = {
   balance: 0,
   hasVoted: false,
 
+
   init: function() {
     return App.initWeb3();
   },
