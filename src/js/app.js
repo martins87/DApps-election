@@ -68,7 +68,7 @@ App = {
         web3.eth.getBalance(App.account, 'latest', function(err, result) {
           if(err === null) {
             App.balance = result;
-            $("#accountBalance").html("Your Balance: " + App.balance);
+            $("#accountBalance").html("Your Balance: " + App.balance + " Wei");
           }
         });
       }
